@@ -7,6 +7,8 @@ import drizzle from './assets/drizzle.png';
 import rain from './assets/rain.png';
 import snow from './assets/snow.png';
 import mist from "./assets/mist.png";
+import humidityicon from "./assets/humidity.png";
+import windicon from "./assets/wind.png";
 
 const ImageMap = {
   clear,
@@ -15,6 +17,7 @@ const ImageMap = {
   rain,
   snow,
   mist,
+  
   default: "./assets/clouds.png"
 };
 
@@ -78,14 +81,14 @@ export function HomePage() {
           <h2 className="city">{city}</h2>
           <div className="details">
             <div className="col">
-              <img src="src/assets/humidity.png" alt="humidity" />
+            <img src={humidityicon} alt={weather} className="weather-icon" />
               <div>
                 <p className="humidity">{humidity}%</p>
                 <p>Humidity</p>
               </div>
             </div>
             <div className="col">
-              <img src="src/assets/wind.png" alt="wind" />
+            <img src={windicon} alt={weather} className="weather-icon" />
               <div>
                 <p className="wind">{wind} km/hr</p>
                 <p>Wind Speed</p>
